@@ -1,0 +1,8 @@
+name: doctest
+version: 2.3.5
+
+build: |
+  mkdir -p build
+  cd build
+  cmake -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE -DDOCTEST_WITH_TESTS=OFF ..
+  make install
